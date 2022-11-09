@@ -10,7 +10,11 @@
   </div>
 
   <div>
+    <% if @task.new_record? %>
+    <%= form.hidden_field :completed, value: false %>
+    <% else %>
     <%= form.check_box(:completed, {}, "true", "false") %>
+    <% end %>
   </div>
 
   <div>
