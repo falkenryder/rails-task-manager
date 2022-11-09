@@ -1,0 +1,19 @@
+<%= form_with model: @task do |form| %>
+  <div>
+    <%= form.label :title, "Title" %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :details, "Details" %><br>
+    <%= form.text_area :details %>
+  </div>
+
+  <div>
+    <%= form.check_box(:completed, {}, "true", "false") %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
